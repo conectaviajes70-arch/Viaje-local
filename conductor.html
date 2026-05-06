@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uber Local - Conductor</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=TU_CLAVE_GOOGLE_MAPS_AQUI"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">Uber Local</div>
+    <div id="estadoConductor">Disponible</div>
+  </div>
+
+  <div class="card">
+    <button id="btnDisponibilidad" onclick="toggleDisponibilidad()" class="btn btn-primary">
+      Estoy Disponible
+    </button>
+  </div>
+
+  <div id="map" style="height: 450px; margin: 15px; border-radius: 16px;"></div>
+
+  <div id="viajeAsignado" class="card" style="display:none;">
+    <h3>Nuevo viaje asignado</h3>
+    <p><strong>Destino:</strong> <span id="destinoText"></span></p>
+    <p><strong>Distancia:</strong> <span id="distanciaText"></span> km</p>
+    <button onclick="aceptarViaje()" class="btn btn-primary">Aceptar Viaje</button>
+    <button onclick="rechazarViaje()" class="btn btn-secondary">Rechazar</button>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/conductor.js"></script>
+</body>
+</html>
